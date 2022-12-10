@@ -7,11 +7,4 @@
     </button>
   </li>
 </ul>
-<div *ngIf="selectedStudent">
-<h2>{{selectedStudent.name | uppercase}} Details</h2>
-<div>Matricule: {{selectedStudent.matNo}}</div>
-<div>
-  <label for="student-name">Student name: </label>
-  <input id="student-name" [(ngModel)]="selectedStudent.name" placeholder="name">
-</div>
-</div>
+<app-student-details [student]="selectedStudent"></app-student-details>
